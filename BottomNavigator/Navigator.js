@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 import Home from '../components/Home';
 import { createAppContainer } from 'react-navigation';
 import ImageRotate from '../components/imageRotate';
-
+import TennisBall from '../components/animatedTennisBall'
 
 
 const BottomTabNavigator = createMaterialBottomTabNavigator({
@@ -17,6 +17,13 @@ const BottomTabNavigator = createMaterialBottomTabNavigator({
     },
     Image: {
         screen: ImageRotate,
+        navigationOptions: {
+            tabBarIcon: ({ focused }) => <Icon name='add-a-photo' size={20} color={focused ? '#FFF' : '#DACE91'} />,
+        }
+    },
+
+    Tennis: {
+        screen: TennisBall,
         navigationOptions: {
             tabBarIcon: ({ focused }) => <Icon name='add-a-photo' size={20} color={focused ? '#FFF' : '#DACE91'} />,
         }
